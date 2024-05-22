@@ -11,6 +11,8 @@ module.exports = {
         const queue = useQueue(interaction.guild.id);
         const track = queue.currentTrack
 
+        await interaction.deferReply();
+
         try {
             queue.node.skip();
 
